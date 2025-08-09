@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mudasir Naeem Profile</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    html,body{height:100%;margin:0;background:radial-gradient(1200px 600px at 10% 10%, rgba(99,102,241,0.12), transparent), radial-gradient(900px 500px at 90% 90%, rgba(16,185,129,0.06), transparent), var(--bg); color:#e6eef6}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:40px}
+    .card{width:960px;max-width:96%;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(2,6,23,0.7);backdrop-filter: blur(6px);display:grid;grid-template-columns:280px 1fr;gap:22px}
+    .avatar{height:220px;border-radius:14px;background:linear-gradient(135deg,#6366f1 0%,#06b6d4 100%);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:white;box-shadow:0 6px 18px rgba(8,11,20,0.6)}
+    .info h1{margin:0;font-size:30px;letter-spacing:0.2px}
+    .info p.lead{color:var(--muted);margin-top:10px;line-height:1.5}
+
+    .badges{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+    .badge{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+
+    .buttons{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .15s ease, box-shadow .15s ease}
+    .btn:active{transform:translateY(1px)}
+
+    /* colorful styles */
+    .btn--linkedin{background:linear-gradient(90deg,#0f1724,#0a66c2);color:white}
+    .btn--github{background:linear-gradient(90deg,#111827,#333333);color:white}
+    .btn--email{background:linear-gradient(90deg,#ef4444,#fb923c);color:white}
+    .btn--copy{background:linear-gradient(90deg,#10b981,#06b6d4);color:white}
+    .btn--profile{background:linear-gradient(90deg,#8b5cf6,#06b6d4);color:white}
+
+    .btn svg{width:18px;height:18px;opacity:0.95}
+
+    .right{padding:8px 6px}
+    .section{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    h3{margin:0 0 10px 0}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.006));border:1px solid rgba(255,255,255,0.02);min-height:78px}
+    .proj a{color:#dbeafe;text-decoration:none;font-weight:600}
+
+    .footer{margin-top:16px;color:var(--muted);font-size:14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+    /* tiny responsive */
+    @media (max-width:760px){.card{grid-template-columns:1fr;}.avatar{height:160px}.buttons{justify-content:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card">
+      <aside>
+        <div class="avatar" id="avatar">
+          Mudasir Naeem
+        </div>
+        <div style="height:12px"></div>
+        <div class="section">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">Mudasir Naeem</div>
+              <div style="color:var(--muted);font-size:13px">Bachelor's in Artificial Intelligence — FAST-NUCES Karachi</div>
+            </div>
+          </div>
+
+          <div class="badges" aria-hidden>
+            <span class="badge">ML &amp; AI</span>
+            <span class="badge">Web Dev</span>
+            <span class="badge">Data Science</span>
+          </div>
+
+          <div class="buttons">
+            <button class="btn btn--profile" id="btnProfile" title="Open my profile section">
+              <!-- profile icon -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20a8 8 0 0116 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              My Profile
+            </button>
+
+            <button class="btn btn--linkedin" id="btnLinkedIn" title="Open LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 016 6v7h-4v-6a2 2 0 00-2-2 2 2 0 00-2 2v6h-4v-13h4v2a4 4 0 014-1zM2 9h4v13h-4zM4 3a2 2 0 110 4 2 2 0 010-4z" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              LinkedIn
+            </button>
+
+            <button class="btn btn--github" id="btnGithub" title="Open GitHub">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.031 2 3 6.03 3 11.002c0 4.036 2.687 7.463 6.417 8.675.47.087.64-.204.64-.454 0-.224-.008-.819-.013-1.606-2.609.568-3.159-1.256-3.159-1.256-.426-1.083-1.041-1.371-1.041-1.371-.853-.583.065-.571.065-.571.942.066 1.438.968 1.438.968.838 1.434 2.197 1.02 2.732.78.085-.606.327-1.02.595-1.254-2.083-.237-4.272-1.042-4.272-4.637 0-1.024.366-1.86.966-2.516-.097-.238-.419-1.197.092-2.495 0 0 .788-.252 2.584.96A9.01 9.01 0 0112 6.844c.798.004 1.603.108 2.354.317 1.795-1.212 2.581-.96 2.581-.96.513 1.298.192 2.257.094 2.495.602.656.964 1.492.964 2.516 0 3.607-2.193 4.396-4.283 4.63.336.29.636.861.636 1.737 0 1.255-.012 2.269-.012 2.579 0 .252.168.545.646.452C18.317 18.46 21 15.036 21 11.002 21 6.03 16.969 2 12 2z" stroke="currentColor" stroke-width="0.3"/></svg>
+              GitHub
+            </button>
+
+            <button class="btn btn--email" id="btnEmail" title="Send an email">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 6H3v12h18V6z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Email
+            </button>
+
+            <button class="btn btn--copy" id="btnCopy" title="Copy email to clipboard">
+              <!-- copy icon -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.2"/><rect x="2" y="2" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.2"/></svg>
+              Copy Email
+            </button>
+
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">Tip: Hover buttons to see quick actions. Click to open.</div>
+        </div>
+      </aside>
+
+      <section class="right">
+        <div class="section info">
+          <h1>Hi, I'm <span style="color:#c7d2fe">Mudasir Naeem</span></h1>
+          <p class="lead">I'm currently pursuing a Bachelor's in Artificial Intelligence at FAST-NUCES Karachi. I enjoy building machine learning models, web projects and practical tools that solve real problems. I like turning ideas into small, demo-ready projects and learning new technologies along the way.</p>
+          <div class="footer">
+            <div>Want to connect? Use the buttons on the left.</div>
+            <div style="font-size:13px">Made with HTML</HTML></div>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+        <div class="section">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="font-weight:700">Contact</div>
+            <div style="color:var(--muted);font-size:13px">Links &amp; email</div>
+          </div>
+
+          <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="https://www.linkedin.com/in/mudasir-naeem-698679303/" target="_blank" style="text-decoration:none"><button class="btn btn--linkedin">Open LinkedIn</button></a>
+            <a href="https://github.com/MudasirNaeem1/MudasirNaeem1" target="_blank" style="text-decoration:none"><button class="btn btn--github">Open GitHub</button></a>
+            <a href="mailto:mudasirnaeem000@gmail.com" style="text-decoration:none"><button class="btn btn--email">Send Email</button></a>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Email: <strong id="emailText">mudasirnaeem000@gmail.com</strong></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // links from the user
+    const LINKEDIN = 'https://www.linkedin.com/in/mudasir-naeem-698679303/';
+    const GITHUB = 'https://github.com/MudasirNaeem1/MudasirNaeem1';
+    const EMAIL = 'mudasirnaeem000@gmail.com';
+
+    document.getElementById('btnLinkedIn').addEventListener('click', ()=>{window.open(LINKEDIN,'_blank')});
+    document.getElementById('btnGithub').addEventListener('click', ()=>{window.open(GITHUB,'_blank')});
+    document.getElementById('btnEmail').addEventListener('click', ()=>{location.href = 'mailto:'+EMAIL});
+
+    // copy to clipboard with tiny animation
+    const btnCopy = document.getElementById('btnCopy');
+    btnCopy.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(EMAIL);
+        const prev = btnCopy.innerHTML;
+        btnCopy.innerHTML = 'Copied!';
+        setTimeout(()=> btnCopy.innerHTML = prev,1500);
+      }catch(e){
+        alert('Copy failed. Email: '+EMAIL);
+      }
+    });
+
+    // profile button scrolls to right section and highlights it
+    document.getElementById('btnProfile').addEventListener('click', ()=>{
+      const right = document.querySelector('.right');
+      right.scrollIntoView({behavior:'smooth',block:'start'});
+      right.animate([
+        {boxShadow:'0 0 0px rgba(0,0,0,0)'},
+        {boxShadow:'0 0 24px rgba(99,102,241,0.18)'}
+      ],{duration:600,iterations:1,fill:'forwards'});
+    });
+
+    // small flair: update avatar initials from name
+    (function(){
+      const initials = 'Mudasir Naeem';
+      const el = document.getElementById('avatar');
+      el.textContent = initials;
+    })();
+  </script>
+</body>
+</html>
