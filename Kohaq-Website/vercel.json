@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "Kohaq-Website/mycode.html",
+      "use": "@vercel/static"
+    }
+  ]
+}
